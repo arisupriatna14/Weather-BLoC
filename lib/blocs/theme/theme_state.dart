@@ -10,6 +10,6 @@ class ThemeState extends Equatable {
 				assert(color != null);
 
 	@override
-  // TODO: implement props
-  List<Object> get props => [theme, color];
+	// TODO: implement props
+	List<Object> get props => [theme, color];
 }
