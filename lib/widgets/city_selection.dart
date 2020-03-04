@@ -6,38 +6,36 @@ class CitySelection extends StatefulWidget {
 }
 
 class _CitySelectionState extends State<CitySelection> {
-	final TextEditingController _textController = TextEditingController();
+  final TextEditingController _textController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-			appBar: AppBar(
-				title: Text('City'),
-			),
-			body: Form(
-				child: Row(
-					children: <Widget>[
-						Expanded(
-							child: Padding(
-								padding: EdgeInsets.only(left: 10.0),
-								child: TextFormField(
-									controller: _textController,
-									decoration: InputDecoration(
-										labelText: 'City',
-										hintText: 'Chicago'
-									),
-								),
-							),
-						),
-						IconButton(
-							icon: Icon(Icons.search),
-							onPressed: () {
-								Navigator.pop(context, _textController.text);
-							},
-						)
-					],
-				),
-			),
-		);
+      appBar: AppBar(
+        title: Text('City'),
+      ),
+      body: Form(
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(left: 10.0),
+                child: TextFormField(
+                  controller: _textController,
+                  decoration:
+                      InputDecoration(labelText: 'City', hintText: 'Chicago'),
+                ),
+              ),
+            ),
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                Navigator.pop(context, _textController.text);
+              },
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

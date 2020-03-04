@@ -12,17 +12,12 @@ void main() {
   BlocSupervisor.delegate = SimpleBlocDelegate();
 
   final WeatherRepository weatherRepository = WeatherRepository(
-    weatherApiClient: WeatherApiClient(
-      httpClient: http.Client()
-    )
-  );
+      weatherApiClient: WeatherApiClient(httpClient: http.Client()));
 
-  runApp(
-    BlocProvider<ThemeBloc>(
-      create: (context) => ThemeBloc(),
-      child: App(weatherRepository: weatherRepository),
-    )
-  );
+  runApp(BlocProvider<ThemeBloc>(
+    create: (context) => ThemeBloc(),
+    child: App(weatherRepository: weatherRepository),
+  ));
 }
 
 class App extends StatelessWidget {
@@ -40,7 +35,8 @@ class App extends StatelessWidget {
           title: 'Flutter Weather',
           theme: themeState.theme,
           home: BlocProvider(
-            create: (context) => WeatherBloc(weatherRepository: weatherRepository),
+            create: (context) =>
+                WeatherBloc(weatherRepository: weatherRepository),
             child: Weather(),
           ),
         );
