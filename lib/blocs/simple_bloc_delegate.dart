@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SimpleBlocDelegate extends BlocDelegate {
-	@override
+  @override
   void onEvent(Bloc bloc, Object event) {
     // TODO: implement onEvent
     super.onEvent(bloc, event);

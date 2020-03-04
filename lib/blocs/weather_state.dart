@@ -3,9 +3,9 @@ import 'package:meta/meta.dart';
 import 'package:weather_bloc/models/models.dart';
 
 abstract class WeatherState extends Equatable {
-	const WeatherState();
+  const WeatherState();
 
-	@override
+  @override
   List<Object> get props => [];
 }
 
@@ -14,11 +14,11 @@ class WeatherEmpty extends WeatherState {}
 class WeatherLoading extends WeatherState {}
 
 class WeatherLoaded extends WeatherState {
-	final Weather weather;
+  final Weather weather;
 
-	const WeatherLoaded({@required this.weather}) : assert(weather != null);
+  const WeatherLoaded({@required this.weather}) : assert(weather != null);
 
-	@override
+  @override
   List<Object> get props => [weather];
 }
 
