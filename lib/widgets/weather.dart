@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_bloc/blocs/blocs.dart';
 import 'package:weather_bloc/blocs/theme/theme_bloc.dart';
 import 'package:weather_bloc/blocs/theme/theme_state.dart';
-import 'package:weather_bloc/widgets/GradientContainer.dart';
+import 'package:weather_bloc/widgets/gradient_container.dart';
 import 'package:weather_bloc/widgets/city_selection.dart';
 import 'package:weather_bloc/widgets/widgets.dart';
 
